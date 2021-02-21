@@ -28,11 +28,18 @@ public class Main1{
         ListaNumeros Lista= new ListaNumeros();
         GnomeSort Gnome= new GnomeSort();
         BubbleSort Bubble=new BubbleSort();
+        MergerSort merge = new MergerSort();
+        QuickSort quick = new  QuickSort(); 
+        
         
         
         
         
         int [] ListaNum=Lista.Azar();
+        System.out.println("Lista de numeros al azar");
+         for(int i=0;i<ListaNum.length;i++) {
+           System.out.print(ListaNum[i]+" ");
+         }
         //System.out.println(ListaNum);
         
         
@@ -54,34 +61,34 @@ public class Main1{
             }
         
         
-         System.out.println("Ordenamiento Gnome Sort");
+         System.out.println("\n Ordenamiento Bubble");
             int []ListaBubble =Bubble.ordenar(ListaNum, ListaNum.length);
         
         
         for(int i=0;i<ListaGnome.length;i++) {
-            System.out.print(ListaGnome[i]+" ");
+            System.out.print(ListaBubble[i]+" ");
            
            
-       
-
                     
             }
         
+        System.out.println("\n Ordenamiento Merge");
+        int b = 0;       
+        int [] ListaMerge = merge.sort(ListaNum, b , ListaNum.length-1 );
         
+         for(int i=0;i<ListaMerge.length;i++) {
+            System.out.print(ListaMerge[i]+" ");
+  
+                    
+            }
+          System.out.println("\n Ordenamiento Quick");
+         int [] ListaQuick = quick.sort(ListaNum, b , ListaNum.length-1 );
         
-        
-        //Sigue el primer ordenamiento Gnome sort
-        
-        
-        //System.out.println("Ordenamiento Gnome Bubble");
-       
-       
-
-        
-        
-        
-       
+         for(int i=0;i<ListaQuick.length;i++) {
+            System.out.print(ListaQuick[i]+" ");
+  
+                    
+            }
         
     }
-    
 }
