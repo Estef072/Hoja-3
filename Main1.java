@@ -30,6 +30,7 @@ public class Main1{
         BubbleSort Bubble=new BubbleSort();
         MergerSort merge = new MergerSort();
         QuickSort quick = new  QuickSort(); 
+        Radix radix  = new Radix (); 
         
         
         
@@ -90,5 +91,13 @@ public class Main1{
                     
             }
         
+         System.out.println("\n Ordenamiento Radix");
+         int [] ListaRadix = radix.radixsort(ListaNum, ListaNum.length-1 );
+        
+         for(int i=0;i<ListaRadix.length;i++) {
+            System.out.print(ListaRadix[i]+" ");
+  
+                    
+            }
     }
 }
